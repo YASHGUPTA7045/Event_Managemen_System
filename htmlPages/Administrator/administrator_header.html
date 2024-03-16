@@ -1,9 +1,9 @@
 {% load static %}
 
 <nav id="titleBar">
-    <!-- <div id="logo_container"> -->
-        <!-- <a href="{% url 'homepage' %}"><img id='logo' src="{% static 'media/imageslogo.png' %}" alt="NU-Sport Logo"></a> -->
-    <!-- </div> -->
+    <div id="logo_container">
+        <a href="{% url 'homepage' %}"><img id='logo' src="{% static 'media/imageslogo.png' %}" alt="NU-Sport Logo"></a>
+    </div>
     <div class="links">
         {% if user.is_authenticated %}
         <div class="dropdown">
