@@ -27,7 +27,8 @@ SECRET_KEY = '6%ur)wpoz&h2glf8htrh+z*pe1@0!flwsczv#t3(5om46($ufy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+
 
 # Application definition
 
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'EventManagementSystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
     #     'NAME': 'EventManagementSystem',
@@ -89,10 +90,21 @@ DATABASES = {
     #     'PASSWORD': 'bhp',
     #     'HOST': 'localhost',
     # }
-    # psycopg2 module needed
+#     # psycopg2 module needed
+    
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'eJSXVauSEMKEinmTKLxrNqONTIRtAJhu',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '59585',
     }
 }
 
@@ -145,3 +157,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
