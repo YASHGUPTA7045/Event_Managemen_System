@@ -101,19 +101,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             max-width: 90%;
-        }
-
-        .notice .main{
+            width: 80%; /* Adjusted width for responsiveness */
             background-color: rgb(182, 155, 155);
             padding: 10px 20px;
             border-radius: 10px;
         }
-
-        .notice .align_center{
-            text-align: center;
+    
+        .notice .main {
+            text-align: center; /* Center align the content */
         }
-
-        .notice .closeNotice{
+    
+        .notice .closeNotice {
             height: unset;
             width: unset;
             padding: 8px 25px;
@@ -124,38 +122,26 @@
             border: none;
             cursor: pointer;
         }
-
-        @media only screen and (max-width: 1140px) {
-            #notice1 {
-                display: block;
+    
+        @media only screen and (max-width: 768px) {
+            /* Adjust notice size for smaller screens */
+            .notice {
+                width: 90%;
             }
         }
-        #notice1{
-            z-index: 10;
-        }
-
-        /* #notice2{
-            display: block;
-        } */
     </style>
-
+    
     <div id="notice1" class="notice">
         <div class="main">
-            <h1 class="align_center">Notice</h1>
-            <p>This website is only designed for viewing on desktop browsers. So, to have good experience kindly open this on Desktop/Laptop Browser.</p>
-            <div class="align_center">
-                <button onclick="closeNotice1()" id="closeNoticebtn" class="closeNotice">Close</button>
-            </div>
+            <h1>Notice</h1>
+            <p>This website is designed for desktop browsers. For the best experience, please use a desktop or laptop browser.</p>
+            <button onclick="closeNotice1()" class="closeNotice">Close</button>
         </div>
     </div>
-
+    
     <script>
-        function closeNotice1(){
+        function closeNotice1() {
             document.getElementById('notice1').style.display = "none";
         }
-
-        function closeNotice2(){
-            document.getElementById('notice2').style.display = "none";
-        }
     </script>
-    {% endblock %}
+        {% endblock %}

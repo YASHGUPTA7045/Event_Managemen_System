@@ -7,11 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign In | Forum</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
-    <style>
+    <!-- <style>
         body{
-            background-image: url("{% static 'media/nirma_bck.jpg' %}");
+            background-image: url("{% static 'media/bgcoodinate.jpeg' %}");
+        }
+    </style> -->
+    <style>
+        body {
+            background-image: url("{% static 'media/bgcoodinate.jpeg' %}");
         }
     </style>
+    
 </head>
 <body>
         <div id="reg_form_box" class="box">
@@ -20,12 +26,12 @@
                 <form method="POST">
                     {% csrf_token %}
                     <div id="username" class="inputbox innerbox">
-                        <input type="text" name="email" {% if email %} value="{{ email }}" {% else %} value="steve.rogers@gmail.com" {% endif %} required="required">
+                        <input type="text" name="email" {% if email %} value="{{ email }}" {% else %} value="demo@123.com" {% endif %} required="required">
                         <label>Email Id</label>
                     </div>
         
                     <div id="password" class="inputbox innerbox">
-                        <input type="password" name="password" value="manage@123" required="required">
+                        <input type="password" name="password" value="test@123" required="required">
                         <label>Password</label>
                     </div>
                     <div id="errormsg" class="innerbox">
